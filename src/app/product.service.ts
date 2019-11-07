@@ -10,6 +10,6 @@ export class ProductService {
 
   constructor(private _http: Http) { }
   getAlbum(id:number):Observable<Album>{
-   return this._http.get(this._albumUrl).map(response =>/*this casts the Album type to the returned JSON object*/<Album>response.json());
+   return this._http.get(this._albumUrl).map(response =><Album>response.json());
   }
 }
